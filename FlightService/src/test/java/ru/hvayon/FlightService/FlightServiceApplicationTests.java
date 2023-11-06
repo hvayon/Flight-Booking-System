@@ -1,4 +1,4 @@
-package test.java.com.hvayon.FlightServiceApplicationTests;
+package java.ru.hvayon.FlightService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -9,5 +9,4 @@ class FlightServiceApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
