@@ -1,4 +1,4 @@
-package ru.hvayon.FlightService.model;
+package ru.hvayon.FlightService.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

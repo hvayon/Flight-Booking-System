@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ru.hvayon</groupId>
-	<artifactId>FlightService</artifactId>
+	<artifactId>Flight-Booking-System</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>FlightService</name>
 	<description>Demo project for Flight Booking System service</description>

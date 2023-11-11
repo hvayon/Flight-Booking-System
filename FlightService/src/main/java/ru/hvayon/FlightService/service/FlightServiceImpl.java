@@ -1,11 +1,15 @@
 package ru.hvayon.FlightService.service;
 
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import ru.hvayon.FlightService.domain.Flight;
 import ru.hvayon.FlightService.repository.FlightRepository;
+
+import java.util.Optional;
+
 @Service
 public class FlightServiceImpl implements FlightService {
     @Autowired(required=true)
@@ -15,5 +19,14 @@ public class FlightServiceImpl implements FlightService {
     public Page<Flight> getFlights(int page, int size) {
         PageRequest pageRequest = PageRequest.of(page, size);
         return flightRepository.findAll(pageRequest);
+    }
+    @Override
+    public Flight getFlightByFlightNumber(String flightNumber) {
+        Optional<Flight> flight = flightRepository.findByFlightNumber(flightNumber);
+        if (flight.isPresent()) {
+            return flight.get();
+        } else {
+            throw new EntityNotFoundException("Flight with flightNumber=" + flightNumber + " not found");
+        }
     }
 }
