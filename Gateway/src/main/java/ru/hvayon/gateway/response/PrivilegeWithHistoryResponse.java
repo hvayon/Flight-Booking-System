@@ -2,14 +2,17 @@ package ru.hvayon.gateway.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @AllArgsConstructor(staticName = "build")
 @NoArgsConstructor
-@Getter
 @Setter
-public class PrivilegeShortInfo {
-    private int balance;
-    private String status;
+@Getter
+public class PrivilegeWithHistoryResponse {
+    int balance;
+    String status;
+    List<BalanceHistory> history;
 }
