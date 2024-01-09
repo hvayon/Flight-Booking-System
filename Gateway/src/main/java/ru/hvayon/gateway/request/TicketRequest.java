@@ -10,7 +10,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor(staticName = "build")
 public class TicketRequest {
-    private String name;
     private String flightNumber;
     private int price;
     private boolean paidFromBalance;

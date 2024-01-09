@@ -1,7 +1,14 @@
 package ru.hvayon.gateway.response;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.UUID;
 
+@AllArgsConstructor(staticName = "build")
+@NoArgsConstructor
+@Data
 public class PurchaseTicketResponse {
     private UUID ticketUid;
     private String flightNumber;
@@ -9,10 +16,10 @@ public class PurchaseTicketResponse {
     private String toAirport;
     private String date;
     private int price;
-    private boolean paidByMoney;
-    private boolean paidByBonuses;
+    int paidByMoney;
+    int paidByBonuses;
     private String status;
-    private PrivilegesInfo privilegesInfo;
+    private PrivilegeShortInfo privilegesInfo;
 
 }
 
